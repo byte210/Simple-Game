@@ -262,6 +262,8 @@
                 window.localStorage.setItem('points', JSON.stringify([]));
                 }
 
+                let pointsNumber = JSON.parse(window.localStorage.getItem('points')).length;
+                
                 question.innerHTML = "GAME OVER";
                 doNotRepeatCheering();
 
