@@ -57,7 +57,7 @@
             <button class="px-5 py-3 btn btn-warning option op-button" style='position: absolute; top: 50%; left: 50%; transform: translate(-220%, -50%); max-width: 100px; overflow: hidden;' onclick='isItCorrect(this.innerHTML);'></button>
 
             <div class="btn btn-danger px-5 py-3" id="gameOverNo" onclick="goBack();">No</div>
-            <div class="btn btn-success px-5 py-3" id="gameOverYes" onclick='easyLevelQuestions();' onmouseup = 'showCheering();' onmousedown = "window.localStorage.clear();">Yes</div>
+            <div class="btn btn-success px-5 py-3" id="gameOverYes" onclick='startGame();' onmouseup = 'showCheering();' onmousedown = "pointsCounter();">Yes</div>
 
         </div>
     </div>
@@ -144,10 +144,17 @@
             };
             cheers();
         }
+            // function isInt(n){
+            //     return Number(n) === n && n % 1 === 0;
+            // }
+
+            // function isFloat(n){
+            //     return Number(n) === n && n % 1 !== 0;
+            // }
 
         const createRandomNumber = (arrayOfNumbers) =>{
             let randomNumber = (Math.random()*10).toFixed();
-
+            
             if(arrayOfNumbers.includes(randomNumber)){
                 randomNumber = createRandomNumber(arrayOfNumbers);
             } 

@@ -1,0 +1,9 @@
+1. Przygotować kontener przechowujący timer, który będzie odliczał od 10 w dół
+2. Przygotować funkcję, która ustawi timer na 10 na start i będzie zmniejszać o 1 co 1 sekundę
+3. Przygotować funkcję, która będzie sprawdzać stan kontenera co zadany czas.
+4. Jeśli wartość w kontenerze osiągnie 0, funkcja zatrzyma grę i pokaże "Game Over"
+5. Jeśli zostanie kliknięta poprawna odpowiedź przed wybiciem "0", split wylosuje kolejne pytanie.
+6. Każde kliknięcie poprawnej odpowiedzi powinno być zliczane i używane jako punkt
+7. Funkcja powinna też przejmować wartość liczbową znajdującą się w kontenerze przechowującym timer, by dodać ją do punktacji.
+
+LINIJKA 110 - OGARNIJ

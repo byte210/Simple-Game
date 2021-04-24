@@ -4,6 +4,8 @@ function startGame(){
 
 function goBack(){
     window.location = './index.html';
+
+    window.localStorage.clear();
 }
 
 function easy(){
@@ -17,4 +19,5 @@ function medium(){
 function hard(){
     window.location = './hardLevel.html';
 }
+
 // easy level build

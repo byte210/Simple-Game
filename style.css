@@ -91,3 +91,242 @@ body{
 .option{
     display: none;
 }
+
+
+
+/* MEDIUM LEVEL */
+
+/* TO POWER OF */
+#powerOperations{
+    width: 200px;
+    height: 200px;
+    margin: 0 auto;
+    background: transparent;
+    position: relative;
+    display:none;
+}
+
+.powBase{
+    color: #E59515;
+    font-size: 75px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.toPowerOf{
+    color: #E59515;
+    font-size: 35px;
+    position: absolute;
+    top:35%;
+    left:60%;
+    transform: translate(-50%, -50%);
+}
+
+
+
+/* LOGARITHMS */
+#logOperations{
+    width: 300px;
+    height: 200px;
+    background: transparent;
+    position: relative;
+    margin: 0 auto;
+    display:none;
+}
+
+.logarithm{
+    color: #6B757D;
+    font-size: 75px;
+    position: absolute;
+    top:50%;
+    left:20%;
+    transform:translate(-50%, -50%);
+}
+
+.logBase{
+    color: #1BA345;
+    font-size:45px;
+    position:absolute;
+    top:70%;
+    left:42%;
+    transform:translate(-50%, -50%);
+}
+
+.logAnswer{
+    color: #BB2D3B;
+    font-size: 70px;
+    position: absolute;
+    top:50%;
+    left:50%;
+    transform:translate(-50%, -50%);
+}
+
+.questionMark{
+    font-size: 75px;
+    position: absolute;
+    top:53%;
+    left:75%;
+    transform: translate(-50%, -50%);
+}
+
+
+/* log2 operations: */
+
+#log2Operations{
+    position:relative;
+    margin:0 auto;
+    width: 400px;
+    height: 200px;
+    background:transparent;
+    display:none;
+}
+
+.logarithmFirst{
+    position:absolute;
+    top:50%;
+    left:10%;
+    transform:translate(-50%, -50%);
+    font-size:50px;
+}
+.baseOne{
+    position:absolute;
+    top:62.5%;
+    left:21%;
+    transform:translate(-50%, -50%);
+    font-size: 25px;
+}
+.answerFirst{
+    position:absolute;
+    top:50%;
+    left:25%;
+    transform:translate(-50%, -50%);
+    font-size:50px;
+    color: #6B757D;
+}
+
+.sign{
+    position:absolute;
+    top:50%;
+    left:35%;
+    transform:translate(-50%, -50%);
+    font-size: 45px;
+}
+
+
+.logarithmSecond{
+    position:absolute;
+    top:50%;
+    left:50%;
+    transform:translate(-50%, -50%);
+    font-size:50px;
+}
+.baseTwo{
+    position:absolute;
+    top:62.5%;
+    left:61%;
+    transform:translate(-50%, -50%);
+    font-size: 25px;
+}
+.answerSecond{
+    position:absolute;
+    top:50%;
+    left:65%;
+    transform:translate(-50%, -50%);
+    font-size:50px;
+    color: #6B757D;
+}
+
+.sign{
+    position:absolute;
+    top:50%;
+    left:35%;
+    transform:translate(-50%, -50%);
+    font-size: 45px;
+}
+
+.equals{
+    position:absolute;
+    top:50%;
+    left:77%;
+    transform:translate(-50%, -50%);
+    font-size: 50px;
+}
+
+/* SQUARE ROOT OPERATIONS */
+#squareRoot{
+    position:relative;
+    margin: 0 auto;
+    max-width: 400px;
+    height: 200px;
+    background: transparent;
+    display:none;
+}
+
+.rootOne{
+    font-size: 75px;
+    position: absolute;
+    top:50%;
+    left:5%;
+    transform:translate(-50%, -50%);
+}
+
+.firstRootInteger{
+    color: #6B757D;
+    font-size: 75px;
+    position: absolute;
+    top:50%;
+    left:15%;
+    transform:translate(-50%, -50%);
+}
+
+.minus{
+    font-size: 75px;
+    position: absolute;
+    top:50%;
+    left:28%;
+    transform:translate(-50%, -50%);
+}
+
+.rootTwo{
+    font-size: 75px;
+    position: absolute;
+    top:50%;
+    left:40%;
+    transform:translate(-50%, -50%);
+}
+
+.secondRootInteger{
+    color: #6B757D;
+    font-size: 75px;
+    position: absolute;
+    top:50%;
+    left:50%;
+    transform:translate(-50%, -50%);
+}
+
+.rootEquals{
+    font-size: 75px;
+    position: absolute;
+    top:50%;
+    left:70%;
+    transform:translate(-50%, -50%);
+}
+
+#integralsOps{
+    position:relative;
+    margin: 0 auto;
+    max-width: 300px;
+    height: 200px;
+    background: transparent;
+    font-size: 75px;
+    display:none;
+}
+
+.integralsQuestionContent{
+    position:absolute;
+    top: 50%;
+    left:50%;
+    transform: translate(-50%, -50%);
+}
