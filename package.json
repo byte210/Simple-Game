@@ -1,0 +1,23 @@
+{
+  "name": "simple-game",
+  "version": "1.0.0",
+  "description": "## easy level - to fix:    - when the number is floating point, the answers should be displayed to precision of digits after the comma",
+  "main": "answerValidator.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/byte210/Simple-Game.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/byte210/Simple-Game/issues"
+  },
+  "homepage": "https://github.com/byte210/Simple-Game#readme",
+  "dependencies": {
+    "mathjs": "^9.3.2",
+    "mathjs-simple-integral": "^0.1.1"
+  }
+}
