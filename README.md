@@ -8,3 +8,5 @@
 
 ## hard level - to fix:
    - get rid of integrals and use easy and medium level questions merged with time given for the answer 10 seconds
+   https://www.npmjs.com/package/mathjs-simple-integral
+   https://mathjs.org/docs/getting_started.html
