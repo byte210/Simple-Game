@@ -51,26 +51,48 @@ function isItCorrect(answer){
 
     if (Number(answer) === correctAnswer){
         pointsCounter();
-        
-        console.log("easyLevelQuestions draw, works");
         doNotRepeatCheering();
         mediumLevelQuestions();
-    } else {
-        function colorItRed(){
-            console.log('I am supposed to be red now')
-            document.querySelector('.levelScrn').style.borderWidth = "10px";
-            document.querySelector('.levelScrn').style.backgroundColor = "red";
-        };
+    } else if (Number(answer) !== correctAnswer){
+        let pointsNumber = JSON.parse(window.localStorage.getItem('points')).length;
+        document.getElementById('question').innerText = 'GAME OVER';
+        doNotRepeatCheering();
+                
+        document.getElementById('powerOperations').style.display = "none"
+        document.getElementById('logOperations').style.display = "none"
+        document.getElementById('log2Operations').style.display = "none"
+        document.getElementById('squareRoot').style.display = "none"
 
-        function colorItDefault(){
-            console.log('I retrive the default color');
-            document.querySelector('.levelScrn').style.borderWidth = "1px";
-            document.querySelector('.levelScrn').style.backgroundColor = "#002642";
-        }
 
-        colorItRed();
+        document.getElementById('question').style.display = "block";
 
-        setTimeout(colorItDefault(), 1500);
+                //hide styling:
+        document.querySelectorAll('.option')[0].style.display = "none";
+        document.querySelectorAll('.option')[1].style.display = "none";
+        document.querySelectorAll('.option')[2].style.display = "none";
+        document.querySelectorAll('.option')[3].style.display = "none";
+
+                //yes no buttons:
+        document.getElementById('gameOverNo').style.display = "block";
+        document.getElementById('gameOverYes').style.display = "block";
+
+
+        document.getElementById('welcomeContent').innerHTML = 'Your score is: '+ pointsNumber + " / 10";
+        // function colorItRed(){
+        //     console.log('I am supposed to be red now')
+        //     document.querySelector('.levelScrn').style.borderWidth = "10px";
+        //     document.querySelector('.levelScrn').style.backgroundColor = "red";
+        // };
+
+        // function colorItDefault(){
+        //     console.log('I retrive the default color');
+        //     document.querySelector('.levelScrn').style.borderWidth = "1px";
+        //     document.querySelector('.levelScrn').style.backgroundColor = "#002642";
+        // }
+
+        // colorItRed();
+
+        // setTimeout(colorItDefault(), 1500);
     }
 //easyLevelQuestions();
 //IF A BUTTON WITH SOME ANSWER WAS CLICKED, HOW TO MAKE FUNCTION RECOGNIZE WHICH BUTTON WAS IT AND HOW TO MAKE IT USE THE INNER TEXT OF THIS BUTTON SO IT COULD VERIFY IF IT IS THE CORRECT ANSWER?

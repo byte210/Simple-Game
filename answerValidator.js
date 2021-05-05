@@ -28,22 +28,24 @@ function isItCorrect(answer){
                 console.log("easyLevelQuestions draw, works");
                 doNotRepeatCheering();
                 easyLevelQuestions();
-            } else {
-                function colorItRed(){
-                    console.log('I am supposed to be red now')
-                    document.querySelector('.levelScrn').style.borderWidth = "10px";
-                    document.querySelector('.levelScrn').style.backgroundColor = "red";
-                };
+            } else if (Number(answer) !== correctAnswer){
+                let pointsNumber = JSON.parse(window.localStorage.getItem('points')).length;
+                document.getElementById('question').innerText = 'GAME OVER';
+                doNotRepeatCheering();
+                
 
-                function colorItDefault(){
-                    console.log('I retrive the default color');
-                    document.querySelector('.levelScrn').style.borderWidth = "1px";
-                    document.querySelector('.levelScrn').style.backgroundColor = "#002642";
-                }
+                //hide styling:
+                document.querySelectorAll('.option')[0].style.display = "none";
+                document.querySelectorAll('.option')[1].style.display = "none";
+                document.querySelectorAll('.option')[2].style.display = "none";
+                document.querySelectorAll('.option')[3].style.display = "none";
 
-                colorItRed();
+                //yes no buttons:
+                document.getElementById('gameOverNo').style.display = "block";
+                document.getElementById('gameOverYes').style.display = "block";
 
-                setTimeout(colorItDefault(), 1500);
+
+                document.getElementById('welcomeContent').innerHTML = 'Your score is: '+ pointsNumber + " / 10";
             }
     //easyLevelQuestions();
 //IF A BUTTON WITH SOME ANSWER WAS CLICKED, HOW TO MAKE FUNCTION RECOGNIZE WHICH BUTTON WAS IT AND HOW TO MAKE IT USE THE INNER TEXT OF THIS BUTTON SO IT COULD VERIFY IF IT IS THE CORRECT ANSWER?

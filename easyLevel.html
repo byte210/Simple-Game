@@ -7,13 +7,13 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
 
 
-    <!-- MOJE CSS -->
+    <!-- My CSS -->
     <link rel="stylesheet" href="style.css" type="text/css" media='(min-width: 500px)'>
 
     <!-- jQuery -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
 
-    <!-- MOJE SKRYPTY -->
+    <!-- My Scripts -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW" crossorigin="anonymous"></script>
     <script src="app.js"></script>
     <script src="answerValidator.js"></script>
@@ -22,14 +22,9 @@
     <title>Simple game</title>
 </head>
 <body>
-    <!-- KOLORY: #002642 #840032 #E59500-->
+    <!-- colors: #002642 #840032 #E59500-->
     <div class="container-fluid" style='height: 100vh; width: 100vw'>
         
-        
-        <!-- DESCRIPTION/INSTRUCTIONS -->
-        <!-- THIS ONE SHOULD BE REPLACED BY TIMER THAT WILL BE TRIGGERED BY FIRST SPIN AND STOPPED BY WRONG ANSWER -->
-        <!-- AFTER WRONG ANSWER IT SHOULD DISPLAY USERS SCORE -->
-        <!-- START BUTTON SHOULD POP-UP SOMEWHERE IN THE GAME CONTENT AREA -->
         <div class="row">
             <div class="mx-auto mt-3 col-sm-10" style="display: block;">
                 <div class="card border-3 border-warning" style='background: #002642;'>
@@ -47,8 +42,6 @@
         <div class="levelScrn">
             <p id='question' class="fs-1">Here is your question</p>
             
-
-            <!-- NIE MOŻNA PRZYPISAĆ DWÓCH FUNKCJI DO JEDNEGO ZDARZENIA DLA POJEDYNCZEGO PRZYCISKU, ALE MOŻNA PRZYPISAĆ DWA RÓŻNE ZDARZENIA DO JEDNEGO PRZYCISKU A DO NICH DWIE RÓŻNE FUNKCJE -->
             <button class='px-5 py-3 btn btn-danger' style='position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%);' onclick='easyLevelQuestions();' onmouseup = 'showCheering();' id="triggerSpin">Spin!</button>
 
             <button class="px-5 py-3 btn btn-warning option op-button" style='position: absolute; top: 50%; left: 50%; transform: translate(130%, -50%); max-width: 100px; overflow: hidden;' onclick='isItCorrect(this.innerHTML);'></button>
@@ -68,14 +61,7 @@
         <div class="bottom-0 mx-4 my-4 btn btn-warning position-absolute end-0" onclick='goBack();'>GO BACK</div>
 
 
-    <!-- LEVEL SCRIPT -->
-
-    <!--    
-            //1. A. ZAPROGRAMOWAĆ TIMER - W PRZYSZŁOŚCI CZAS GRY MÓGŁBY BYĆ WYBIERALNY      PRZEZ UŻYTKOWNIKA, ALE WSTĘPNIE NP 5 MINUT ODLICZANE W DÓŁ
-            //1. B. ZAPROGRAMOWAĆ FUNKCJE KTÓRE BĘDĄ PODMIENIAĆ TREŚĆ DIVA, W KTÓRYM JEST INSTRUKCJA GRY ODPOWIEDNIO NA TIMER A POTEM NA SUKCES ALBO GAME OVER CZY COŚ
-            //2. ZAPROGRAMOWAĆ FIXED ANSWERS, TAK ŻEBY MOŻNA BYŁO UNIKNĄĆ INPUTU DO WALIDACJI - FUNKCJA POLICZY SAMA LOSOWE PYTANIE I WRZUCI ODPOWIEDŹ DO NIEGO GDZIEŚ W WYGENEROWANY PRZYCISK - JEŚLI PRZYCISK ZOSTANIE WYBRANY - ONCLICK = PRINTSUCCESS() FUNCTION - DO NAPISANIA, TAK ABY INFORMOWAŁA UŻYTKOWNIKA O WYGRANEJ
-            //3. W KOLEJNYM ETAPIE GRA MOGŁABY SIĘ ODBYWAĆ AŻ DO UKOŃCZENIA CZASU PRZEZ UŻYTKOWNIKA A KAŻDA KOLEJNA POPRAWNA ODPOWIEDŹ GENEROWAŁABY NASTĘPNE LOSOWE PYTANIE, KTÓRE BYŁOBY ZNOWÓŻ UMIESZCZANE W PRZYCISKU I WALIDOWANE PRZEZ KOD
-            //4. MOŻNA POMYŚLEĆ O ZAPROGRAMOWANIU RÓŻNYCH TRYBÓW PERSONALIZACJI TRUDNOŚCI - JAK NP OBLICZANIA PUNKTACJI NA PODSTAWIE LICZBY ODPOWIEDZIANYCH PYTAŃ ALBO NA PODSTAWIE CZASU, KTÓRY POZOSTAŁ (PRZY TEJ DRUGIEJ OPCJI LICZBA PYTAŃ BYŁABY Z GÓRY USTALONA, NP MAX 10 W 5 MINUT) -->
+    
 
     <script>
         //CHEERING:
@@ -84,7 +70,6 @@
         window.timerInterval = -1;
         
         
-        //do każdego przycisku odpowiedzi osobno przypisać trigger showCheering jednocześnie czyszczący interval przed ponownym jej uruchomieniem.
         const doNotRepeatCheering = () =>{
             clearInterval(window.cheeringInterval);
             clearInterval(window.timerInterval);
@@ -144,13 +129,6 @@
             };
             cheers();
         }
-            // function isInt(n){
-            //     return Number(n) === n && n % 1 === 0;
-            // }
-
-            // function isFloat(n){
-            //     return Number(n) === n && n % 1 !== 0;
-            // }
 
         const createRandomNumber = (arrayOfNumbers) =>{
             let randomNumber = (Math.random()*10).toFixed();
@@ -161,8 +139,6 @@
             return randomNumber;
         }
 
-        //timer chodzi ale interwał się nie czyści. dlaczego??
-        //NAWET JEŚLI NIE KLIKAMY NA ODPOWIEDZI, ZARÓWNO FUNKCJA LOSOWANIA CHEER UPÓW JAK I TIMER PRZYSPIESZAJĄ, DLACZEGO?
 
         const TenTimer = () => {
             document.getElementById('tenTimer').style.display = 'block';
@@ -322,15 +298,7 @@
                 document.getElementById('welcomeContent').innerHTML = 'Your score is: '+ pointsNumber + " / 10";
             }
         }
-            /* 
-            10 pytań łącznie
-
-            -po kliknięciu "spin" rozpoczęcie rozgrywki
-            -automatyczne wydrukowanie 4 opcji odpowiedzi 
-            -po kliknięciu na właściwą odpowiedź -> zmienić styl danger na success
-            -po 2-3 sekundach wylosować następne pytanie
-            -powtórzyć aż zostanie udzielonych 10 poprawnych odpowiedzi.
-            */
+        
     </script>
 </body>
 </html>
