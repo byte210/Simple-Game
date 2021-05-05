@@ -18,6 +18,7 @@
     <script src="app.js"></script>
     <script src="answerValidatorMedium.js"></script>
     <script src="pointsCounter.js"></script>
+    <script src="cheeringGuard.js"></script>
 
     <title>Simple game</title>
 </head>
@@ -93,9 +94,6 @@
 
                 <div class="rootEquals">= ?</div>
             </div>
-
-
-
 
 
 
@@ -332,7 +330,7 @@
                 }
 
                
-                
+                cheeringGuard();
                 window.cheeringInterval = setInterval(showCheering, 3.5*1000);
                 window.timerInterval = setInterval(() => {
                     TenTimer();
