@@ -1,6 +1,3 @@
-//math.import(require('mathjs-simple-integral'));
-
-
 function isItCorrect(answer){
     //uchwyty:
     let powQuestion = document.getElementById('powerOperations');
