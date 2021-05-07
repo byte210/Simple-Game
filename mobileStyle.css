@@ -10,6 +10,8 @@ html{
     color: #E59500;
 }
 
+
+/* index.html */
 .mobile-container{
     position: absolute;
     top:50%;
@@ -35,4 +37,25 @@ html{
 .welcomeScrn h3{
     padding-bottom: 20px;
     border-bottom: 1px dashed #e59500;
+}
+
+/* level.html */
+
+.mobile-level-html{
+    position: absolute !important; 
+    top: 50% !important;
+    left: 50% !important;
+    transform: translate(-50%, -50%) !important;
+}
+
+.levelScrn h3{
+    position: absolute !important;
+    top: 20% !important;
+    left: 50% !important;
+    transform: translate(-50%, -50%) !important;
+    text-align: center !important;
+}
+
+.level-option{
+    margin-top: 20px !important;
 }
