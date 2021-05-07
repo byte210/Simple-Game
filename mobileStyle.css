@@ -1,0 +1,38 @@
+html{
+    scroll-behavior: smooth;
+}
+
+*{
+    margin: 0 !important;
+    box-sizing: border-box !important;
+    background: #002642;
+    font-family: 'Inconsolata', monospace;
+    color: #E59500;
+}
+
+.mobile-container{
+    position: absolute;
+    top:50%;
+    left:50%;
+    transform: translate(-50%, -50%);
+}
+
+.welcomeScrn{
+    display: flex !important;
+    justify-content: center !important;
+    align-items: center !important;
+    flex-direction: column !important;
+}
+
+.welcomeScrn h1{
+    font-size: 60px !important;
+    font-weight: bold;
+} 
+.welcomeScrn h3{
+    font-size: 50px !important;
+}
+
+.welcomeScrn h3{
+    padding-bottom: 20px;
+    border-bottom: 1px dashed #e59500;
+}
