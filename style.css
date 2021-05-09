@@ -60,6 +60,10 @@ body{
     }
 }
 
+#question{
+    display: none;
+}
+
 #gameOverNo{
     position:absolute;
     top:50%;
@@ -91,7 +95,6 @@ body{
 .option{
     display: none;
 }
-
 
 
 /* MEDIUM LEVEL */

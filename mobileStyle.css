@@ -59,3 +59,43 @@ html{
 .level-option{
     margin-top: 20px !important;
 }
+
+.option{
+    display: none;
+    padding: 10px 20px 10px 20px !important;
+    margin: 0px 5px 0px 5px !important;
+    max-width: 60px !important;
+}
+
+
+#question{
+    display: none;
+    position: absolute;
+    top:30%;
+    left: 50%;
+    transform:translate(-50%,-50%);
+}
+
+#welcomeContent{
+    font-size: 20px;
+}
+
+#gameOverNo{
+    position:absolute;
+    top:50%;
+    left:30%;
+    transform:translate(-50%, -50%);
+    display: none;
+}
+
+#gameOverYes{
+    position:absolute;
+    top:50%;
+    left:70%;
+    transform:translate(-50%, -50%);
+    display: none;
+}
+
+.mobileGoBack{
+    margin: 10px !important;
+}
