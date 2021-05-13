@@ -99,3 +99,9 @@ html{
 .mobileGoBack{
     margin: 10px !important;
 }
+
+/* medium level */
+
+.operationsScreen{
+    display:none;
+}

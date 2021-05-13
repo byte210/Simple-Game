@@ -54,46 +54,39 @@
             <button class='px-5 py-3 btn btn-danger' style='position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%);' onclick='mediumLevelQuestions();' onmouseup = 'showCheering();' id="triggerSpin">Spin!</button>
 
 
-            <!-- TO POWER OF OPERATION: -->
-            <div id = "powerOperations">
-                <div class="powBase"></div>
-                <div class="toPowerOf"></div>
-            </div>
-
-            <!-- LOG(X)Y OPERATION: -->
-            <div id="logOperations">
-                <div class="logarithm">log</div>
-                <div class="logBase"></div>
-                <div class="logAnswer"></div>
-                <div class="questionMark">=?</div>
-            </div>
-
-            <!-- LOG2(X) OPERATION: -->
-            <div id="log2Operations">
-                <div class="logarithmFirst">log</div>
-                <div class="baseOne">2</div>
-                <div class="answerFirst"></div>
-
-                <div class="sign">+</div>
-
-                <div class="logarithmSecond">log</div>
-                <div class="baseTwo">2</div>
-                <div class="answerSecond"></div>
-
-                <div class="equals">=?</div>
-            </div>
-
-            <!-- SQUARE ROOT -->
-            <div id="squareRoot">
-                <div class="rootOne">&#8730</div>
-                <div class="firstRootInteger">k</div>
-
-                <div class="minus">-</div>
-
-                <div class="rootTwo">&#8730</div>
-                <div class="secondRootInteger">k</div>
-
-                <div class="rootEquals">= ?</div>
+            <div class="operationsScreen">
+                <!-- TO POWER OF OPERATION: -->
+                <div id = "powerOperations">
+                    <div class="powBase"></div>
+                    <div class="toPowerOf"></div>
+                </div>
+                <!-- LOG(X)Y OPERATION: -->
+                <div id="logOperations">
+                    <div class="logarithm">log</div>
+                    <div class="logBase"></div>
+                    <div class="logAnswer"></div>
+                    <div class="questionMark">=?</div>
+                </div>
+                <!-- LOG2(X) OPERATION: -->
+                <div id="log2Operations">
+                    <div class="logarithmFirst">log</div>
+                    <div class="baseOne">2</div>
+                    <div class="answerFirst"></div>
+                    <div class="sign">+</div>
+                    <div class="logarithmSecond">log</div>
+                    <div class="baseTwo">2</div>
+                    <div class="answerSecond"></div>
+                    <div class="equals">=?</div>
+                </div>
+                <!-- SQUARE ROOT -->
+                <div id="squareRoot">
+                    <div class="rootOne">&#8730</div>
+                    <div class="firstRootInteger">k</div>
+                    <div class="minus">-</div>
+                    <div class="rootTwo">&#8730</div>
+                    <div class="secondRootInteger">k</div>
+                    <div class="rootEquals">= ?</div>
+                </div>
             </div>
 
 
@@ -329,7 +322,7 @@
                     optionCatcher[1].innerText = b;
                     optionCatcher[2].innerText = c;
                 }
-
+                document.querySelector('.operationsScreen').style.display = 'block';
                
                 cheeringGuard();
                 window.cheeringInterval = setInterval(showCheering, 3.5*1000);
