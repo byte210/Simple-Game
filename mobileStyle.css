@@ -63,8 +63,9 @@ html{
 .option{
     display: none;
     padding: 10px 20px 10px 20px !important;
-    margin: 0px 5px 0px 5px !important;
-    max-width: 60px !important;
+    margin: 0px 10px 0px 10px !important;
+    min-width: 70px !important;
+    max-width: 70px !important;
 }
 
 
