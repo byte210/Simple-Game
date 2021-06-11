@@ -225,7 +225,7 @@
             document.getElementById('tenTimer').innerHTML = 10;
             //OPERATIONS VARIABLES
             const mediumNums = [1, 2, 3, 4, 5, 6, 7, 8, 9];
-            const mediumCops = ['power','log','log2','sqrt'];
+            const mediumCops = ['power','sqrt'];
 
             let optionCatcher = document.querySelectorAll('.option');
             let question = document.getElementById('question');
@@ -237,7 +237,7 @@
             let secondInt = mediumNums[parseInt(((parseInt((Math.random()*10).toFixed())/10)*8).toFixed())];
 
             //OPERATION DRAW
-            let operation = mediumCops[parseInt(((parseInt((Math.random()*10).toFixed())/10)*3).toFixed())];
+            let operation = mediumCops[parseInt(((parseInt((Math.random()*10).toFixed())/10)*1).toFixed())];
 
             if(counter<10){
                 counter++;
@@ -251,16 +251,7 @@
                     document.getElementById('powerOperations').style.display = 'block';
                     document.querySelector('.powBase').innerHTML = firstInt;
                     document.querySelector('.toPowerOf').innerHTML = secondInt;
-                } else if(operation === 'log'){
-                    document.getElementById('logOperations').style.display = 'block';
-                    document.querySelector('.logBase').innerHTML = firstInt;
-                    document.querySelector('.logAnswer').innerHTML = secondInt;
-                    //zależności dla innych operacji
-                } else if(operation === 'log2'){
-                    document.getElementById('log2Operations').style.display = 'block';
-                    document.querySelector('.answerFirst').innerHTML = firstInt;
-                    document.querySelector('.answerSecond').innerHTML = secondInt;
-                } else{
+                } else if(operation  === 'sqrt'){
                     document.getElementById('squareRoot').style.display = 'block';
                     document.querySelector('.firstRootInteger').innerHTML = firstInt;
                     document.querySelector('.secondRootInteger').innerHTML = secondInt;
@@ -274,16 +265,6 @@
                 if(operation === "power"){
                     sum = Math.pow(Number(firstInt), Number(secondInt));
                     sum = sum.toFixed().toString();
-                } else if(operation === "log"){
-                    let f = (x, y) => {
-                        return Math.log(Number(y)) / Math.log(Number(x))
-                    };
-                    sum = f(Number(firstInt), Number(secondInt));
-
-                    sum = sum.toString();
-                } else if(operation === "log2"){
-                    sum = Math.log2(Number(firstInt)) + Math.log2(Number(secondInt));
-                    sum = sum.toString();
                 } else{
                     sum = Math.sqrt(Number(firstInt)) - Math.sqrt(Number(secondInt));
                     sum = sum.toString();
