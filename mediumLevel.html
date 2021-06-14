@@ -225,7 +225,7 @@
             document.getElementById('tenTimer').innerHTML = 10;
             //OPERATIONS VARIABLES
             const mediumNums = [1, 2, 3, 4, 5, 6, 7, 8, 9];
-            const mediumCops = ['power','log','log2','sqrt'];
+            const mediumCops = ['power','sqrt'];
 
             let optionCatcher = document.querySelectorAll('.option');
             let question = document.getElementById('question');
@@ -237,7 +237,7 @@
             let secondInt = mediumNums[parseInt(((parseInt((Math.random()*10).toFixed())/10)*8).toFixed())];
 
             //OPERATION DRAW
-            let operation = mediumCops[parseInt(((parseInt((Math.random()*10).toFixed())/10)*3).toFixed())];
+            let operation = mediumCops[parseInt(((parseInt((Math.random()*10).toFixed())/10)*1).toFixed())];
 
             if(counter<10){
                 counter++;
