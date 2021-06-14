@@ -52,7 +52,7 @@ function isItCorrect(answer){
     if (Number(answer) === correctAnswer){
         pointsCounter();
         doNotRepeatCheering();
-        mediumLevelQuestions();
+        hardLevelQuestions();
     } else if (Number(answer) !== correctAnswer){
         let pointsNumber = JSON.parse(window.localStorage.getItem('points')).length;
         document.getElementById('question').innerText = 'GAME OVER';
