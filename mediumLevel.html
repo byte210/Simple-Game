@@ -186,16 +186,14 @@
             cheers();
         }
 
-        const createRandomNumber = (arrayOfNumbers) =>{
-            //let randomNumber = (Math.random()*10).toFixed();
-            
-            let randomNumber = Math.random()*10;
-
-            if(arrayOfNumbers.includes(randomNumber)){
-                randomNumber = createRandomNumber(arrayOfNumbers);
-            } 
-            return randomNumber;
-        }
+        const createRandomNumber = (arrayOfNumbers, min, max) =>{
+                let randomNumber = Math.round((Math.random() * (max - min) + min));
+                
+                if(arrayOfNumbers.includes(randomNumber)){
+                    randomNumber = createRandomNumber(arrayOfNumbers, min, max);
+                } 
+                return randomNumber;
+            }
 
         //timer chodzi ale interwał się nie czyści. dlaczego??
         //NAWET JEŚLI NIE KLIKAMY NA ODPOWIEDZI, ZARÓWNO FUNKCJA LOSOWANIA CHEER UPÓW JAK I TIMER PRZYSPIESZAJĄ, DLACZEGO?
@@ -297,30 +295,46 @@
 
                 
                 let k = parseInt(((parseInt((Math.random()*10).toFixed())/10)*3));
-
-                optionCatcher[k].innerText = sum;
-                
-                let a = createRandomNumber([sum]);
-                let b = createRandomNumber([sum, a]);
-                let c = createRandomNumber([sum, a, b]);
-
+    
+                optionCatcher[k].setAttribute('data-value', sum);
+                optionCatcher[k].innerHTML = toFixedIfNecessary(sum, 2);
+                    
+                let a = createRandomNumber([sum], sum-5, sum+5);
+                let b = createRandomNumber([sum, a], sum-5, sum+5);
+                let c = createRandomNumber([sum, a, b], sum-5, sum+5);
+                    
+                function toFixedIfNecessary( value, dp ){
+                    return +parseFloat(value).toFixed( dp );
+                }
 
                 if(k === 0){
-                    optionCatcher[1].innerText = a;
-                    optionCatcher[2].innerText = b;
-                    optionCatcher[3].innerText = c;
+                    optionCatcher[1].setAttribute('data-value', a);
+                    optionCatcher[1].innerHTML = toFixedIfNecessary(a, 2);
+                    optionCatcher[2].setAttribute('data-value', b);
+                    optionCatcher[2].innerHTML = toFixedIfNecessary(b, 2);
+                    optionCatcher[3].setAttribute('data-value', c);
+                    optionCatcher[3].innerHTML = toFixedIfNecessary(c, 2);
                 } else if(k === 1){
-                    optionCatcher[0].innerText = a;
-                    optionCatcher[2].innerText = b;
-                    optionCatcher[3].innerText = c;
+                    optionCatcher[0].setAttribute('data-value', a);
+                    optionCatcher[0].innerHTML = toFixedIfNecessary(a, 2);
+                    optionCatcher[2].setAttribute('data-value', b);
+                    optionCatcher[2].innerHTML = toFixedIfNecessary(b, 2);
+                    optionCatcher[3].setAttribute('data-value', c);
+                    optionCatcher[3].innerHTML = toFixedIfNecessary(c, 2);
                 } else if(k === 2){
-                    optionCatcher[0].innerText = a;
-                    optionCatcher[1].innerText = b;
-                    optionCatcher[3].innerText = c;
+                    optionCatcher[0].setAttribute('data-value', a);
+                    optionCatcher[0].innerHTML = toFixedIfNecessary(a, 2);
+                    optionCatcher[1].setAttribute('data-value', b);
+                    optionCatcher[1].innerHTML = toFixedIfNecessary(b, 2);
+                    optionCatcher[3].setAttribute('data-value', c);
+                    optionCatcher[3].innerHTML = toFixedIfNecessary(c, 2);
                 } else {
-                    optionCatcher[0].innerText = a;
-                    optionCatcher[1].innerText = b;
-                    optionCatcher[2].innerText = c;
+                    optionCatcher[0].setAttribute('data-value', a);
+                    optionCatcher[0].innerHTML = toFixedIfNecessary(a, 2);
+                    optionCatcher[1].setAttribute('data-value', b);
+                    optionCatcher[1].innerHTML = toFixedIfNecessary(b, 2);
+                    optionCatcher[2].setAttribute('data-value', c);
+                    optionCatcher[2].innerHTML = toFixedIfNecessary(c, 2);
                 }
                 document.querySelector('.operationsScreen').style.display = 'block';
             

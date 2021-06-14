@@ -20,7 +20,8 @@
     <script src="app.js" defer></script>
     <script src="answerValidatorHard.js" defer></script>
     <script src="pointsCounter.js" defer></script>
-    <script src="hardLevelScript.js" defer></script>
+    <script src="cheeringGuard.js"></script>
+    <!-- <script src="hardLevelScript.js" defer></script> -->
     
     <title>Simple game</title>
 </head>
@@ -269,7 +270,7 @@
                     optionCatcher[3].style.display = "block";
     
                     
-                    let k = parseInt(((parseInt((Math.random()*10).toFixed())/10)*3));
+                let k = parseInt(((parseInt((Math.random()*10).toFixed())/10)*3));
     
                 optionCatcher[k].setAttribute('data-value', sum);
                 optionCatcher[k].innerHTML = toFixedIfNecessary(sum, 2);
