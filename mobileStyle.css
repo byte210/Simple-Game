@@ -342,3 +342,71 @@ html{
 #squareRoot{
     display: none;
 }
+
+.rootOne{
+    position: absolute;
+    top: 30%;
+    left: 15%;
+    font-size: 45px;
+    font-weight: bold;
+}
+
+.firstRootInteger{
+    position: absolute;
+    top: 29.8%;
+    left: 23%;
+    font-size: 45px;
+    font-weight: bold;
+    color: red;
+}
+
+.minus{
+    position: absolute;
+    top: 29.5%;
+    left: 33%;
+    font-size: 45px;
+    font-weight: bold;
+}
+
+.rootTwo{
+    position: absolute;
+    top: 30%;
+    left: 43%;
+    font-size: 45px;
+    font-weight: bold;
+}
+
+.secondRootInteger{
+    position: absolute;
+    top: 29.8%;
+    left: 51.5%;
+    font-size: 45px;
+    font-weight: bold;
+    color: red;
+}
+
+.rootEquals{
+    position: absolute;
+    top: 29.8%;
+    left: 61%;
+    font-size: 45px;
+    font-weight: bold;
+}
+
+.powBase{
+    position: absolute;
+    top: 35%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 60px;
+    color: green;
+}
+
+.toPowerOf{
+    position: absolute;
+    top: 30%;
+    left: 56%;
+    transform: translate(-50%, -50%);
+    font-size: 30px;
+    color: red;
+}
