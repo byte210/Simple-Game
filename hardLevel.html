@@ -115,8 +115,6 @@
             window.cheeringInterval = -1;
             window.timerInterval = -1;
             
-            
-            //do każdego przycisku odpowiedzi osobno przypisać trigger showCheering jednocześnie czyszczący interval przed ponownym jej uruchomieniem.
             const doNotRepeatCheering = () =>{
                 clearInterval(window.cheeringInterval);
                 clearInterval(window.timerInterval);
@@ -190,7 +188,7 @@
                 document.getElementById('tenTimer').style.display = 'block';
     
                 let grabTimer = Number(document.getElementById('tenTimer').innerHTML);
-                --grabTimer;
+                //--grabTimer;
     
                 document.getElementById('tenTimer').innerHTML = grabTimer;
     
