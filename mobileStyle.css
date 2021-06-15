@@ -170,3 +170,149 @@ html{
         left: 55%;
     }
 }
+
+.logarithmFirst{
+    position: absolute;
+    top: 30%;
+    left: 25%;
+    font-size: 30px;
+    font-weight: bold;
+}
+
+.baseOne{
+    position: absolute;
+    top: 34%;
+    left: 36%;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.answerFirst{
+    position: absolute;
+    top: 29.5%;
+    left: 40%;
+    font-size: 35px;
+    font-weight: bold;
+    color: gray;
+}
+
+.sign{
+    position: absolute;
+    top: 30.5%;
+    left: 47%;
+    font-size: 25px;
+    font-weight: bold;
+}
+
+.logarithmSecond{
+    position: absolute;
+    top: 30%;
+    left: 53%;
+    font-size: 30px;
+    font-weight: bold;
+}
+
+.baseTwo{
+    position: absolute;
+    top: 34%;
+    left: 64.5%;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.answerSecond{
+    position: absolute;
+    top: 29.5%;
+    left: 68.5%;
+    font-size: 35px;
+    font-weight: bold;
+    color: gray;
+}
+
+.equals{
+    position: absolute;
+    top: 30%;
+    right: 19%;
+    font-size: 30px;
+}
+
+@media (max-width: 447px){
+    .logarithmFirst{
+        left: 22%;
+    }
+    .baseOne{
+        left: 35%;
+    }
+    .answerFirst{
+        left: 38.5%;
+    }
+    .sign{
+        left: 45.5%;
+    }
+    .logarithmSecond{
+        left: 51%;
+    }
+    .baseTwo{
+        left: 62.5%;
+    }
+    .answerSecond{
+        left: 66.5%;
+    }
+    .equals{
+        right: 21%;
+    }
+}
+
+@media (max-width: 416px){
+    .logarithmFirst{
+        left: 20%;
+    }
+    .baseOne{
+        left: 34%;
+    }
+    .answerFirst{
+        left: 37.5%;
+    }
+    .sign{
+        left: 44%;
+    }
+    .logarithmSecond{
+        left: 49%;
+    }
+    .baseTwo{
+        left: 62.5%;
+    }
+    .answerSecond{
+        left: 66%;
+    }
+    .equals{
+        right: 21%;
+    }
+}
+
+@media (max-width: 400px){
+    .logarithmFirst{
+        left: 18%;
+    }
+    .baseOne{
+        left: 32%;
+    }
+    .answerFirst{
+        left: 35.5%;
+    }
+    .sign{
+        left: 43%;
+    }
+    .logarithmSecond{
+        left: 48%;
+    }
+    .baseTwo{
+        left: 62.5%;
+    }
+    .answerSecond{
+        left: 66%;
+    }
+    .equals{
+        right: 20%;
+    }
+}
