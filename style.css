@@ -333,3 +333,9 @@ body{
     left:50%;
     transform: translate(-50%, -50%);
 }
+
+.infoContainer{
+    background: #E59500 !important; 
+    color: white;
+    z-index: 1;
+}
