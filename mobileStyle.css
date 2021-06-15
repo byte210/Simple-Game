@@ -106,6 +106,22 @@ html{
     display:none;
 }
 
+.powerOperations{
+    display: none;
+}
+
+.logOperations{
+    display: none;
+}
+
+.log20Operations{
+    display: none;
+}
+
+.squareRoot{
+    display: none;
+}
+
 .logarithm{
     position: absolute;
     top: 30%;
