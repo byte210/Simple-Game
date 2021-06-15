@@ -334,3 +334,11 @@ html{
         right: 20%;
     }
 }
+
+#powerOperations{
+    display: none;
+}
+
+#squareRoot{
+    display: none;
+}
